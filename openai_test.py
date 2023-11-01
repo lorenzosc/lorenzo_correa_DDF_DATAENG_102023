@@ -8,12 +8,13 @@ from config import openai_key
 
 async def get_gpt_response (
     product_description: str, semaphore: asyncio.Semaphore, 
-    retry: int = 3
+    product_name: str, retry: int = 3
 ) -> dict:
     """Get chat completion from chat gpt for given message
 
     :param product_description: description for prompt in chatgpt
     :param semaphore: Semaphore used for control of tasks
+    :param product_name: Product name for inclusion in response
     :param retry: number of retries to get response before giving up
     :return: dictionary of gpt response
     """
@@ -32,10 +33,11 @@ async def get_gpt_response (
             end = len(reply) - reply[::-1].find("}")
 
             reply_dict = json.loads(reply[start:end])
+            reply_dict["product_name"] = product_name
             semaphore.release()
             return reply_dict
         
-        except:
+        except Exception:
             traceback.print_exc()
             time.sleep(30)
 
@@ -64,7 +66,8 @@ def record_results (
 
         #append answers from chatgpt
         for product in output_data:
-            file_data["products"].append(product)
+            if isinstance(product, dict):
+                file_data["products"].append(product)
         
         #reset pointer just for precaution
         file.seek(0)
@@ -74,7 +77,7 @@ def record_results (
 
 async def async_extract (
     file_reader: csv.reader, skip_lines: int = 0, 
-    semaphore_value: int = 1, limit: int = 1000
+    semaphore_value: int = 1, limit: int = 100
 ) -> tuple[int, list[dict]]:
     """Asynchronous function for asynchronous requests in chatgpt
 
@@ -87,33 +90,37 @@ async def async_extract (
     products = []
     sem = asyncio.Semaphore(semaphore_value)
     tasks = {}
-    for i, line in enumerate(file_reader):
+    try:
+        for i, line in enumerate(file_reader):
 
-        if i < skip_lines:
-            continue
+            if i < skip_lines:
+                continue
 
-        last_line = i
-        print(f"{i}")
+            last_line = i
+            print(f"{i}")
 
-        await sem.acquire()
-        task = asyncio.create_task(get_gpt_response(line[2], sem))
-        tasks[i] = task
-        
-        limit -= 1
-        if not limit:
-            last_line = i+1
-            break
-    
-    for product in asyncio.as_completed(tasks.values()):
+            await sem.acquire()
+            task = asyncio.create_task(get_gpt_response(line[2], sem, line[1]))
+            tasks[i] = task
+            
+            limit -= 1
+            if not limit:
+                last_line = i+1
+                break
+    except KeyboardInterrupt:
+        pass
 
-        try:
-            result = await product
-            products.append(result)
+    finally:
+        for product in asyncio.as_completed(tasks.values()):
 
-        except Exception:
-            traceback.print_exc()
+            try:
+                result = await product
+                products.append(result)
 
-    return last_line, products
+            except Exception:
+                traceback.print_exc()
+
+        return last_line, products
 
 async def main () -> None:
     openai.api_key = openai_key
