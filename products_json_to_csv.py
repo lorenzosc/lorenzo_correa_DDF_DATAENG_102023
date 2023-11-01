@@ -23,7 +23,7 @@ def write_to_csv (fields: list[str], data: list[list[str]], csv_path: str) -> No
     :param data: Data to write to csv
     :param csv_path: Path for csv file
     """
-    with open(csv_path, mode="w+", newline='') as csv_file:
+    with open(csv_path, mode="w+", newline='', encoding="UTF-8") as csv_file:
         writer = csv.writer(csv_file)
         writer.writerow(fields)
         writer.writerows(data)
