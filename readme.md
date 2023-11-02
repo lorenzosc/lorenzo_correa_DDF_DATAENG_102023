@@ -6,10 +6,7 @@
 
 ## ITEM 2
 
-O dataset foi baixado e transformado no formato adequado utilizando os códigos jsonl_to_csv.py e posteriormente o
-divide_csv.py devido ao tamanho acima do limitado para upload no site. Como eram muitos dados, as análises foram
-feitas apenas em cima de produtos que estavam na primeira divisão, e, dessa forma, apenas a primeira divisão foi
-catalogada na Dadosfera. Os dados podem ser encontrados em:
+O dataset foi baixado e transformado no formato adequado utilizando os códigos [jsonl_to_csv.py](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/jsonl_to_csv.py) e posteriormente o [divide_csv.py](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/divide_csv.py) devido ao tamanho acima do limitado para upload no site. Como eram muitos dados, as análises foram feitas apenas em cima de produtos que estavam na primeira divisão, e, dessa forma, apenas a primeira divisão foi catalogada na Dadosfera. Os dados podem ser encontrados em:
 
 [Dataset](https://app.dadosfera.ai/pt-BR/catalog/data-assets/812f5bb6-be86-4c27-b867-5bb20b807568)
 
