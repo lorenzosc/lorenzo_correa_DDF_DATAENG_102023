@@ -13,7 +13,7 @@ catalogada na Dadosfera. Os dados podem ser encontrados em:
 
 [Dataset](https://app.dadosfera.ai/pt-BR/catalog/data-assets/812f5bb6-be86-4c27-b867-5bb20b807568)
 
-![Foto do Dataset](Link)
+![Foto do Dataset](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/raw_dataset.png)
 
 ## ITEM 3
 
@@ -25,7 +25,7 @@ As features foram registradas em um arquivo json, e depois transformadas em CSV 
 com uso do código [products_json_to_csv.py](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/products_json_to_csv.py).
 
 [Dataset](https://app.dadosfera.ai/pt-BR/catalog/data-assets/4b486b91-1e30-43f5-b8e2-9e5fe22e51d1)
-![Foto do Dataset](link)
+![Foto do Dataset](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/features_dataset.png)
 
 ## ITEM 4
 
@@ -36,7 +36,7 @@ foi encontrado 1 produto foram ignoradas na segunda query, dando outra possibili
 [SQL Query](https://metabase-treinamentos.dadosfera.ai/question/469-product-categories)
 [SQL Query 2](https://metabase-treinamentos.dadosfera.ai/question/468-product-categories-without-uniques)
 [Dashboard](https://metabase-treinamentos.dadosfera.ai/dashboard/58-categorias-de-produtos)
-![Todos as categorias](Link)
-![Sem as categorias de apenas 1 produto](Link)
+![Todos as categorias](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/Product%20categories-02_11_2023%2C%2018_35_20.png)
+![Sem as categorias de apenas 1 produto](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/Product%20categories%20without%20uniques-02_11_2023%2C%2018_35_23.png)
 
 ## ITEM 5
