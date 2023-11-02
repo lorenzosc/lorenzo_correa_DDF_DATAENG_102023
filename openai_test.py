@@ -77,7 +77,7 @@ def record_results (
 
 async def async_extract (
     file_reader: csv.reader, skip_lines: int = 0, 
-    semaphore_value: int = 1, limit: int = 100
+    semaphore_value: int = 1, limit: int = 1000
 ) -> tuple[int, list[dict]]:
     """Asynchronous function for asynchronous requests in chatgpt
 
