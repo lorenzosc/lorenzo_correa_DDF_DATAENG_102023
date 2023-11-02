@@ -15,8 +15,7 @@ O dataset foi baixado e transformado no formato adequado utilizando os códigos 
 ## ITEM 3
 
 A extração de features dos produtos foram feitas através da utilização da API do chatGPT, biblioteca openai do python.
-O código [openai_usage.py](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/openai_usage.py) realiza extrações de forma assincrona, mas se limita em fazer no máximo 3 requisições por vez 
-para não exceder o máximo de tokens por minuto que a API aceita.
+O código [openai_usage.py](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/openai_usage.py) realiza extrações de forma assincrona, mas se limita em fazer no máximo 3 requisições por vez para não exceder o máximo de tokens por minuto que a API aceita. A mensagem utilizada como prompt para o chatGPT ser vista [aqui](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/c59e024425f2d1eb48b80b814905ad9dbbf4da04/openai_usage.py#L23-L25)
 
 As features foram registradas em um arquivo json, e depois transformadas em CSV para upload novamente na Dadosfera
 com uso do código [products_json_to_csv.py](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/products_json_to_csv.py).
