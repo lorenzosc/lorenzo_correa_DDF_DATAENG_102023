@@ -41,7 +41,7 @@ foi encontrado 1 produto foram ignoradas na segunda query, dando outra possibili
 
 ## ITEM 5
 
-[Dataapp](https://app-intelligence-treinamentos.dadosfera.ai/pbp-service-visualizacao-bc5e29e5-4fee-4f6430458f0b-905e-4aaf_8501/)
+[Data app](https://app-intelligence-treinamentos.dadosfera.ai/pbp-service-visualizacao-bc5e29e5-4fee-4f6430458f0b-905e-4aaf_8501/)
 
 O Data app foi criado para facilitar a verificação da quantidade de produtos por categoria, material ou número de features conforme foi caracterizado no ITEM 3 pelo chatGPT.
 
