@@ -47,4 +47,4 @@ O Data app foi criado para facilitar a verificação da quantidade de produtos p
 
 ## ITEM BONUS
 
-O código [openai_image.py](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/openai_image.py) foi utilizado com diferentes prompts na tentativa de criar imagens com a AI generativa da openAI. Entretanto, nenhuma delas se provou adequada para o uso, e as que foram consideradas melhores podem ser encontradas na pasta [images](link).
+O código [openai_image.py](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/blob/main/openai_image.py) foi utilizado com diferentes prompts na tentativa de criar imagens com a AI generativa da openAI. Entretanto, nenhuma delas se provou adequada para o uso, e as que foram consideradas melhores podem ser encontradas na pasta [images](https://github.com/lorenzosc/lorenzo_correa_DDF_DATAENG_102023/tree/main/images).
