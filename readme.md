@@ -2,7 +2,7 @@
 
 ## ITEM 1
 
-[Vídeo](link)
+[Vídeo](https://youtu.be/8Xh23EdS2tE)
 
 ## ITEM 2
 
